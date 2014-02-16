@@ -1,0 +1,37 @@
+name: BNotify
+version: 1.2
+author: broswen
+description: A custom "poke" plugin
+main: me.broswen.bnotify.BNotify
+
+
+commands:
+  bnotify:
+    description: Main command of the plugin
+    aliases: bn
+  poke:
+    description: Pokes someone 
+    aliases: p
+  poketoggle:
+    description: toggles your poke status
+    aliases: poket
+    
+permissions:
+  bnotify.*:
+    children:
+      bnotify.help: true
+      bnotify.poke: true
+      bnotify.exempt: true
+      bnotify.toggle: true
+  bnotify.poke:
+    description: Allows you to poke.
+    default: op
+  bnotify.info:
+    description: Allows you to /bnotify
+    default: op
+  bnotify.exempt:
+    description: Blocks you from being poked
+    default: op
+  bnotify.toggle:
+    description: allows you to toggle pokes
+    default: op
